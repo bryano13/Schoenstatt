@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Schoenstatt Cali</title>
+  <link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/5z393mys7jujbxb/logo_yellow_no_bg.png?dl=0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+  video {
+    width: 100%;
+    height: auto;
+  }
+  .navbar-brand{
+    font-size: 24px;
+  }
+  .nav-item{
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+    .mylogo {
+	width: 60%;
+    }
+  }
+  .btn{
+    border: 3px outset #ffcc00;
+    color: white;
+    background-color: #010066;
+    padding: 13px;
+  }
+  /* Change color on hover */
+  .btn:hover{
+    border:3px outset #ffcc00;
+    color: #ffcc00;
+    background-color:  #0c099e;
+  }
+  .nav-link:hover{
+    color: #ffcc00 !important;
+  }
+  .nav-link{
+    color: white !important;
+  }
+  article{
+    padding: 10px;
+  }
+  .slides{
+    border:3px outset #0c099e;
+    max-width: 800px;
+  }
+  .form{
+    color: #0c099e !important;
+  }
+</style>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-sm navbar-dark"
+  style="background-color: #010066">
+  <a class="navbar-brand w3-hover-white" href="/">
+    <img src="https://dl.dropboxusercontent.com/s/rnvk0ph3e2y49aa/home_image.png?dl=0"
+              class="img-fluid rounded-circle mx-auto d-block" width="40" height="40">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="tienda">Tienda</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Eventos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">¿Quienes Somos?</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br><br>
+
+<body class="bg-light">
+
+  {% if success %}
+  <div class="alert alert-success">
+    <strong>Mensaje {{ success }},</strong>
+    Pronto te daremos respuesta.
+  </div>
+  {% endif %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 text-center text-md-left pr-md-6">
+                <h1 class="mb-3 display-4">Schoenstatt
+                    <span class="badge badge-success">Cali</span>
+                </h1>
+                <div class="w3-panel w3-leftbar w3-light-grey">
+                  <p class="w3-xlarge w3-serif"><i>"Un hijo de Maria nunca perecerá"</i></p>
+                  <p>- Joseph Kentenich</p>
+                </div>
+                <p class="lead mb-4 w3-xlarge w3-serif text-justify">
+                En Schoenstatt promovemos la renovación religiosa-moral del individuo y de la comunidad,
+                principalmente de la familia y de la comunidad eclesial, inspirados
+                en los principios del Evangelio y del Magisterio de la Iglesia para
+                lograr una nueva sociedad más fraterna, justa y solidaria animada por
+                un "alma" cristiana. 
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://dl.dropboxusercontent.com/s/rnvk0ph3e2y49aa/home_image.png?dl=0" class="mx-auto d-block img-fluid mylogo">
+            </div>
+        </div><br>
+        <a href="{{url_for('static', filename='/media/BOLETIN_SEP_DIC_2020.pdf')}}" download="BOLETIN_SEP_DIC_2020"
+          class="btn btn-block btn-lg w3-xlarge fas fa-download">
+            <b>BOLETÍN 2020</b></a>
+        </a>
+    </div>
+  <!-- Grid of images and descriptions -->
+  <article class="container">
+    <div>
+      <h2>Familia Schoenstatt</h2>
+      <p>Carrusel de fotos sobre nuestra comunidad en la ciudad de Santiago de Cali, Colombia.</p>
+    </div>
+    
+    <div class="w3-content w3-display-container slides">
+    
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/retiro_edith.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+        Retiro
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/collage1.jpg')}}" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Donaciones
+      </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/Comunidad2.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Labor social (Fulavi-hic, Provida)
+      </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/Mercados.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+        Donación de Mercados parroquia San Martin de Porres
+      </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/Comunidad.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Misa Acción de gracias 2020
+      </div>
+    </div>
+    
+
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/hmna_petra.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+        Visita de la hermana Petra a Cali, Colombia. Año 2014.
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/jovenes.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+        Alianza de amor de la juventud
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/cantando.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Misa de Alianza
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/misa_sin_tapa.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+        Misa en Templo Votivo
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/cuadro.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Entrega del cuadro Virgen Peregrina a Ruth Sanchez
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/colibri_jave.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+        Seminario sobre el medio ambiente
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/retiro2.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Retiro en el Colegio de la Sagrada Familia
+      </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/novenas.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+        Festejo novena hogar Santa Ana
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/padre_i.jpeg')}}" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Alianza de amor 2019
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/abuelitos.jpg')}}" style="width:100%">
+      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+        Hogar Anciano Abandonado
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{url_for('static', filename='/slides/panales.jpg')}}" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Donación Hogar Anciano Abandonado
+      </div>
+    </div>
+
+
+    <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+    
+    </div>
+    
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+
+  <form action="/" method="POST" class="w3-container w3-card-4 w3-light-grey form"
+      style="margin-top: 100px !important;" id="forma">
+    <h2 class="w3-center">Contáctanos</h2>
+     
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+        <div class="w3-rest">
+          <input class="w3-input w3-border" name="first" type="text" placeholder="Nombre">
+        </div>
+    </div>
+    
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+        <div class="w3-rest">
+          <input class="w3-input w3-border" name="last" type="text" placeholder="Apellido">
+        </div>
+    </div>
+    
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+        <div class="w3-rest">
+          <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+        </div>
+    </div>
+    
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+        <div class="w3-rest">
+          <input class="w3-input w3-border" name="phone" type="text" placeholder="Teléfono">
+        </div>
+    </div>
+    
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+        <div class="w3-rest">
+          <textarea class="w3-input w3-border" rows="5" id="comment" name="text"
+            placeholder="Me gustaría averiguar mas sobre...."></textarea>
+        </div>
+    </div>
+    
+    <button class="w3-button w3-block w3-section w3-ripple w3-padding" 
+      style="background-color: #010066; color: white">
+      Enviar
+    </button>
+    
+    </form>  
+
+  </article>       
+
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://project-inmersion.herokuapp.com/">Schoenstatt</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</body>
+
+</html>

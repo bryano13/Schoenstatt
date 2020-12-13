@@ -1,0 +1,24 @@
+camisas_Negro-Gris_70-000.png
+casulla_blanco_442-000.png
+casulla_blanco-dorado_478-000.png
+casulla-cristo_rojo_575-000.png
+casulla_dorado_599-000.png
+casulla-mariana_blanco_575-000.png
+casulla_rojo_599-000.png
+casulla_verde_442-000.png
+casulla_verde_500-000.png
+cristo_dorado_8-000.png
+cristo_dorado-brillante_8-000.png
+cristo_verde-dorado_8-000.png
+cruz-de-letras_No-Aplica_25-000.png
+dige-virgen-de-Schoenstatt_dorado_8-000.png
+dije-con-tapa-en-forma-de-flor_dorado_8-000.png
+Icono-virgen_4-500.png
+Libro-evangelium_No-Aplica_5-000.png
+Libro-Laudato-si_No-Aplica_6-000.png
+Libro-luz-de-cristo_No-Aplica_23-000.png
+Libro-Nuevo-Catecismo_No-Aplica_30-000.png
+Libro-quince-minutos_No-Aplica_3-500.png
+Libro-Santo-rosario_No Aplica_4-500.png
+rosario_marron_15-000.png
+rosario-virgen_marron_15-000.png
