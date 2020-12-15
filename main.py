@@ -57,7 +57,10 @@ def home():
             'Consulta en página de Schoenstatt',
             sender='bryan.orlens@gmail.com',
             recipients=['schoenstatt.cali18@gmail.com',
-                        'erileju123@gmail.com'])
+                        'erileju123@gmail.com',
+                        'erileju123@yahoo.es',
+                        'mlyla56@hotmail.com',
+                        'clapaorozvi@gmail.com'])
         msg.body = "> email: {}\n> telefono: {}\n> nombre: {} {}\n> mensaje: {}\n".format(
             email, phone, name, last, texto)
         mail.send(msg)
