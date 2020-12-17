@@ -162,17 +162,17 @@
 
     <div class="flex-container">
 
-        {% for key, value in my_dict.items()  %}
+        {% for value in my_list  %}
           <div class="item">
             <div class="item-image">
-              <img src="../static/tienda/{{ key }}" alt="{{key}}">
+              <img src="../static/tienda/{{ value[0] }}" alt="{{value[1][0]}}">
             </div>
             <div class="item-content">
               <h3 style="font-weight: bold; text-align: left;">
-                ${{ value[-1] }}<span id="donacion">  (Precio donación)</span>
+                ${{ value[1][-1] }}<span id="donacion">  (Precio donación)</span>
               </h3>
-                <p><span class="titulo">{{ value[0] }}</span></p>
-                <p><span><b>Color: </b>{{ value[1] }}</span></p>
+                <p><span class="titulo">{{ value[1][0] }}</span></p>
+                <p><span><b>Color: </b>{{ value[1][1] }}</span></p>
 
               <a href="/#forma" class="read" style="color: blue;">
                 <p><div style="margin-top: 10px;">Contactanos🛒</div></p>

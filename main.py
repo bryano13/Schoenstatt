@@ -27,6 +27,7 @@ for index, line in enumerate(line_list):
             pass
         else:
             d[line] = item_list
+sort_d = sorted(d.items(), key=lambda x: x[1][-1], reverse=False)
 
 
 
@@ -42,7 +43,7 @@ mail = Mail(app)
 
 @app.route('/tienda', methods=['GET', 'POST'])
 def tienda1():
-    return render_template('tienda.html', my_dict=d, lista=line_list)
+    return render_template('tienda.html', my_list=sort_d, lista=line_list)
 
 
 @app.route('/', methods=['GET', 'POST'])
