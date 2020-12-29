@@ -38,7 +38,7 @@
       margin-top: 5px;
       padding: 15px;
     }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 525px) {
     .txt{
       font-size: 20px;
       text-align: center;
@@ -58,6 +58,35 @@
     .mylogo {
 	    width: 60%;
     }
+    .title{
+      margin: auto;
+      text-align: center;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .txt{
+      font-size: 20px;
+      text-align: center;
+      font-weight: 300;
+    }
+    .quote{
+      margin-bottom: 5px;
+      padding-top: 10px;
+    }
+    .pic{
+      margin: auto;
+      order: 2;
+    }
+    .schoenstatt{
+      order: 1;
+    }
+    .mylogo {
+	    width: 100%;
+    }
+    .title{
+      margin: auto;
+      text-align: center;
+    }
   }
   .flex-container{
     display: flex;
@@ -69,7 +98,7 @@
   }
   .item{
     flex: 40%;
-    padding: 10px;
+    padding: 10px !important;
   }
   .btn{
     border: 3px outset #ffcc00;
@@ -139,7 +168,7 @@
   <div class="container">
       <div class="flex-container">
           <div class="item schoenstatt"> 
-              <h1 class="mb-3 display-4 item">Schoenstatt
+              <h1 class="mb-3 display-4 title">Schoenstatt
                 <span class="badge badge-success">Cali</span>
               </h1>
               <div>
