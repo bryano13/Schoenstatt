@@ -208,120 +208,14 @@
     </div>
     
     <div class="w3-content w3-display-container slides">
-    
+  {% for pic in pic_list %}  
     <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/retiro_edith.jpeg')}}" style="width:100%">
+      <img src="../static/slides/{{pic}}" style="width:100%">
       <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-        Retiro
       </div>
     </div>
-
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/collage1.jpg')}}" style="width:100%">
-      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-        Donaciones
-      </div>
-    </div>
-    
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/Comunidad2.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-        Labor social (Fulavi-hic, Provida)
-      </div>
-    </div>
-    
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/Mercados.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-        Donación de Mercados parroquia San Martin de Porres
-      </div>
-    </div>
-    
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/Comunidad.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-        Misa Acción de gracias 2020
-      </div>
-    </div>
-    
-
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/hmna_petra.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-        Visita de la hermana Petra a Cali, Colombia. Año 2014.
-      </div>
-    </div>
-
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/jovenes.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-        Alianza de amor de la juventud
-      </div>
-    </div>
-
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/cantando.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-        Misa de Alianza
-      </div>
-    </div>
-
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/misa_sin_tapa.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-        Misa en Templo Votivo
-      </div>
-    </div>
-
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/cuadro.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-        Entrega del cuadro Virgen Peregrina a Ruth Sanchez
-      </div>
-    </div>
-
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/colibri_jave.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-        Seminario sobre el medio ambiente
-      </div>
-    </div>
-
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/retiro2.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-        Retiro en el Colegio de la Sagrada Familia
-      </div>
-    </div>
-    
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/novenas.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-        Festejo novena hogar Santa Ana
-      </div>
-    </div>
-
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/padre_i.jpeg')}}" style="width:100%">
-      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-        Alianza de amor 2019
-      </div>
-    </div>
-
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/abuelitos.jpg')}}" style="width:100%">
-      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-        Hogar Anciano Abandonado
-      </div>
-    </div>
-
-    <div class="w3-display-container mySlides">
-      <img src="{{url_for('static', filename='/slides/panales.jpg')}}" style="width:100%">
-      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
-        Donación Hogar Anciano Abandonado
-      </div>
-    </div>
-
+  {% endfor %}
+  <!-- END Grid of images and descriptions -->
 
     <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
     <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>

@@ -29,9 +29,16 @@ for index, line in enumerate(line_list):
             d[line] = item_list
 sort_d = sorted(d.items(), key=lambda x: x[1][-1], reverse=False)
 
+# creating a list of pictures for the slides section on home.html
+with open("slides.txt", "r") as my_slides:
+    slides = my_slides.read()
+pic_list = []
+for i in range(len(slides)):
+    p_list = slides.split("\n")
+    pic_list = p_list[:-1]
 
 
-app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'schoenstatt.cali18@gmail.com'
 app.config['MAIL_PASSWORD'] = 'Virgen123'
@@ -65,8 +72,9 @@ def home():
         msg.body = "> email: {}\n> telefono: {}\n> nombre: {} {}\n> mensaje: {}\n".format(
             email, phone, name, last, texto)
         mail.send(msg)
-        return render_template('home.html', success="Enviado")
-    return render_template('home.html')
+        return render_template(
+            'home.html', success="Enviado", pic_list=pic_list)
+    return render_template('home.html', pic_list=pic_list)
 
 
 if __name__ == "__main__":
