@@ -52,9 +52,11 @@ mail = Mail(app)
 def tienda1():
     return render_template('tienda.html', my_list=sort_d, lista=line_list)
 
+
 @app.route('/about_us', methods=['GET', 'POST'])
 def about():
     return render_template('about_us.html')
+
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
