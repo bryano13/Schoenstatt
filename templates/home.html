@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <title>Schoenstatt Cali</title>
   <link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/5z393mys7jujbxb/logo_yellow_no_bg.png?dl=0">
   <meta charset="utf-8">
@@ -141,21 +142,34 @@
   .form{
     color: #0c099e !important;
   }
-  .navbar-toggler{
+  /*.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }*/
+  .navbar-toggler {
     border: 2px outset #ffcc00 !important;
     color: black;
   }
-  .navbar-toggler:hover{
+  .navbar-toggler:hover {
     background-color: #7575b3;
     border: 1px outset #ffcc00 !important;
   }
-  .imagen{
+  .imagen {
     background-color: white;
     border: 2px outset #ffcc00 !important;
   }
-  .imagen:hover{
+  .imagen:hover {
     background-color: rgba(255, 255, 255, 0.808);
     border: 2.5px outset #ffcc00 !important;
+  }
+  .bingo-pic {
+    border-style: solid;
+    max-width: 800px;
+    margin:auto;
+  }
+  .container.bingo {
+    margin:auto !important;
   }
 </style>
 
@@ -222,11 +236,18 @@
         </a>
   </div>
     
+    <div class="container" style="text-align:center;">
+      <h2>Disfruta con nosotros del bingo virtual</h2>
+      <div class="w3-content slides">
+        <img src="../static/media/bingo1.png" style="width:100%">
+      </div>
+    </div>
+
   <!-- Grid of images and descriptions -->
   <article class="container">
     <div>
-      <h2>Familia Schoenstatt</h2>
-      <p>Carrusel de fotos sobre nuestra comunidad en la ciudad de Santiago de Cali, Colombia.</p>
+      <h2 style="text-align: center;">Familia Schoenstatt</h2>
+      <p style="text-align: center;">Carrusel de fotos sobre nuestra comunidad en la ciudad de Santiago de Cali, Colombia.</p>
     </div>
     
     <div class="w3-content w3-display-container slides">
@@ -253,16 +274,23 @@
     function showDivs(n) {
       var i;
       var x = document.getElementsByClassName("mySlides");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
+      if (n > x.length) 
+      {
+        slideIndex = 1
+      }
+      if (n < 1) 
+      {
+        slideIndex = x.length
+      }
+      for (i = 0; i < x.length; i++) 
+      {
          x[i].style.display = "none";  
       }
       x[slideIndex-1].style.display = "block";  
     }
     </script>
 
-  <form action="/" method="POST" class="w3-container w3-card-4 w3-light-grey form"
+  <form action="/" method="post" class="w3-container w3-card-4 w3-light-grey form"
       style="margin-top: 50px !important;" id="forma">
     <h2 class="w3-center">Contáctanos</h2>
      

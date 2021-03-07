@@ -2,7 +2,9 @@
 from flask import Flask, render_template
 from flask import request
 from flask_mail import Mail, Message
+import json
 
+from flask import jsonify
 
 app = Flask(__name__)
 
@@ -38,14 +40,39 @@ for i in range(len(slides)):
     pic_list = p_list[:-1]
 
 
+with open("sample.json", "w") as sampleFile:
+    json.dump(pic_list, sampleFile)
+
+
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'schoenstatt.cali18@gmail.com'
-app.config['MAIL_PASSWORD'] = 'Virgen123'
+app.config['MAIL_PASSWORD'] = 'Virgen123!'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
+
+
+@app.route('/hello', methods=['GET', 'POST'])
+def hello():
+
+    # POST request
+    if request.method == 'POST':
+        print('Incoming..')
+        print(request.get_json())  # parse as JSON
+        return 'OK', 200
+
+    # GET request
+    else:
+        message = {'greeting': 'Hello from Flask!'}
+        return jsonify(message)  # serialize and use JSON headers
+
+
+@app.route('/test')
+def test_page():
+    # look inside `templates` and serve `index.html`
+    return render_template('sample.html')
 
 
 @app.route('/tienda', methods=['GET', 'POST'])
@@ -68,7 +95,7 @@ def home():
         phone = request.form["phone"]
         msg = Message(
             'Consulta en página de Schoenstatt',
-            sender='bryan.orlens@gmail.com',
+            sender='schoenstatt.cali18@gmail.com',
             recipients=['schoenstatt.cali18@gmail.com',
                         'erileju123@gmail.com',
                         'erileju123@yahoo.es',
